@@ -8,69 +8,59 @@
 " -------------------------
 call plug#begin()
 
-    "--------------------------------------------------------------------------------------
     " Syntax color & IDE behavior
     " -------------------------------------------------------------------------------------
     Plug 'danilo-augusto/vim-afterglow'     " Sublime scheme color
     Plug 'vim-scripts/AutoComplPop'         " Automatically show popup
     Plug '907th/vim-auto-save'              " Autosave file
     Plug 'yggdroot/indentline'              " Indentation guides
-    Plug 'bling/vim-airline'                " Display status line
-    "Plug 'roxma/nvim-completion-manager'    " Syntax completion for multiple languages
+    Plug 'vim-airline/vim-airline'          " Status line
+    Plug 'terryma/vim-multiple-cursors'     " Sublime multi cursor
     "Plug 'sirver/UltiSnips'                 " Tab for completion
 
-    " ---------------------------------------------------------------------------------------
     "  C++ syntax support
     "  --------------------------------------------------------------------------------------
     Plug 'octol/vim-cpp-enhanced-highlight'
 
-    " ---------------------------------------------------------------------------------------
     " R syntax support
     " ---------------------------------------------------------------------------------------
     Plug 'jalvesaq/nvim-r'                  " RStudio-like behavior
     "Plug 'gaalcaras/ncm-R'                  " Go as you type completion
 
-    "----------------------------------------------------------------------------------------
-    " Python syntax support
-    " ---------------------------------------------------------------------------------------
-    "Plug 'vim-python/python-syntax'
-    "Plug 'nvie/vim-flake8'
-
-    " ---------------------------------------------------------------------------------------
     " React JSX functionality
     " ---------------------------------------------------------------------------------------
     Plug 'mxw/vim-jsx'                      " React syntax support
     Plug 'mattn/emmet-vim'                  " HTML syntax support
 
-    " ---------------------------------------------------------------------------------------
     " JavaScript & Sass syntax
     " ---------------------------------------------------------------------------------------
     Plug 'pangloss/vim-javascript'          " Syntax support for JS
-    "Plug 'leafgarland/typescript-vim'       " Syntax support for Typescript
     Plug 'cakebaker/scss-syntax.vim'        " Syntax support for Sass
     Plug 'hail2u/vim-css3-syntax'           " Syntax support for CSS
     Plug 'lepture/vim-css'                  " Snippets for CSS
 
-    " ---------------------------------------------------------------------------------------
     " Linter
     " ---------------------------------------------------------------------------------------
     Plug 'w0rp/ale'                         " Linter for multiple languages
 
-    " ---------------------------------------------------------------------------------------
     "  Auto Pairs
     " ---------------------------------------------------------------------------------------
     Plug 'jiangmiao/auto-pairs'
+
+    " GitHub
+    " ---------------------------------------------------------------------------------------
+    Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
 " ---------------------------
 " Netrw defaults
 " --------------------------
-"let g:netrw_liststyle = 3
-"let g:netrw_winsize = 85
-"let g:netrw_banner = 0
-"let g:netrw_browse_split = 2
-"let g:netrw_altv = 1
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 85
+let g:netrw_banner = 0
+let g:netrw_browse_split = 2
+let g:netrw_altv = 1
 
 " --------------------------------------------------------------------
 " Filetype detection, filetype specific plugins,
@@ -191,12 +181,12 @@ let g:ale_linters = {
 " ---------------------------------------
 let g:ale_sign_column_always = 1
 let g:airline#extensions#ale#enabled = 1
-"highlight ALEErrorSign ctermbg=124
-"highlight AleError ctermbg=124
-"highlight AleWarningSign ctermbg=3
-"highlight AleWarningSign ctermfg=0
-"highlight AleWarning ctermbg=3
-"highlight AleWarning ctermfg=0
+
+"highlight ALEErrorSign ctermbg=196
+"highlight AleError ctermbg=196
+
+"highlight AleWarningSign ctermfg=226
+"highlight AleWarning ctermbg=228
 
 " -------------------------------
 "  Vim status bar -- INSERT --
@@ -219,16 +209,10 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 
-" --------------------------
-"  Python syntax options
-"  -------------------------
-"let g:python_highlight_all = 1
-
 " -------------------
 "  React snippets
 "  ------------------
 inoremap rr<CR> import React, { Component } from "react";<Esc>o
-
 
 " --------------
 "  Spell Check
