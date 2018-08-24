@@ -8,7 +8,8 @@
     "extends":
     [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:jest/recommended"
     ],
     "parserOptions":
     {
@@ -19,11 +20,12 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "jest"
     ],
+    "parser": "babel-eslint",
     "rules":
     {
-        //"indent": [ "warn", 4 ],
         "linebreak-style": [ "error", "unix" ],
         "quotes": [ "warn", "double" ],
         "semi": [ "error", "always" ],
