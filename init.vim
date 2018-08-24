@@ -38,6 +38,7 @@ call plug#begin()
     Plug 'cakebaker/scss-syntax.vim'        " Syntax support for Sass
     Plug 'hail2u/vim-css3-syntax'           " Syntax support for CSS
     Plug 'lepture/vim-css'                  " Snippets for CSS
+    Plug 'leafgarland/typescript-vim'       " TypeScript syntax
 
     " Linter
     " ---------------------------------------------------------------------------------------
