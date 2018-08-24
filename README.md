@@ -5,4 +5,4 @@
 4. .tmux.conf - basic settings
 
 # dev-dir shell script
-1. dev-dir - use with webpack-template (another repo of mine) and .zshrc
+1. dev-dir - use with webpack-template (another repo of mine), package.json, and .zshrc
