@@ -9,47 +9,40 @@
 call plug#begin()
 
     " Syntax color & IDE behavior
-    " -------------------------------------------------------------------------------------
     Plug 'danilo-augusto/vim-afterglow'     " Sublime scheme color
-    Plug 'vim-scripts/AutoComplPop'         " Automatically show popup
+    "Plug 'vim-scripts/AutoComplPop'         " Automatically show popup
     Plug '907th/vim-auto-save'              " Autosave file
     Plug 'yggdroot/indentline'              " Indentation guides
     Plug 'vim-airline/vim-airline'          " Status line
-    Plug 'terryma/vim-multiple-cursors'     " Sublime multi cursor
+    "Plug 'terryma/vim-multiple-cursors'     " Sublime multi cursor
     "Plug 'sirver/UltiSnips'                 " Tab for completion
 
     "  C++ syntax support
-    "  --------------------------------------------------------------------------------------
-    Plug 'octol/vim-cpp-enhanced-highlight'
+    "Plug 'octol/vim-cpp-enhanced-highlight'
 
     " R syntax support
-    " ---------------------------------------------------------------------------------------
     Plug 'jalvesaq/nvim-r'                  " RStudio-like behavior
     "Plug 'gaalcaras/ncm-R'                  " Go as you type completion
 
     " React JSX functionality
-    " ---------------------------------------------------------------------------------------
     Plug 'mxw/vim-jsx'                      " React syntax support
     Plug 'mattn/emmet-vim'                  " HTML syntax support
 
     " JavaScript & Sass syntax
-    " ---------------------------------------------------------------------------------------
     Plug 'pangloss/vim-javascript'          " Syntax support for JS
-    Plug 'cakebaker/scss-syntax.vim'        " Syntax support for Sass
-    Plug 'hail2u/vim-css3-syntax'           " Syntax support for CSS
-    Plug 'lepture/vim-css'                  " Snippets for CSS
+    "Plug 'cakebaker/scss-syntax.vim'        " Syntax support for Sass
+    "Plug 'hail2u/vim-css3-syntax'           " Syntax support for CSS
+    "Plug 'lepture/vim-css'                  " Snippets for CSS
+    " ---------------------------------------------------------------------------------------
     Plug 'leafgarland/typescript-vim'       " TypeScript syntax
 
     " Linter
-    " ---------------------------------------------------------------------------------------
     Plug 'w0rp/ale'                         " Linter for multiple languages
 
     "  Auto Pairs
-    " ---------------------------------------------------------------------------------------
     Plug 'jiangmiao/auto-pairs'
 
     " GitHub
-    " ---------------------------------------------------------------------------------------
     Plug 'tpope/vim-fugitive'
 
 call plug#end()
@@ -118,12 +111,12 @@ inoremap jj <esc>
 " menuone uses popup menu when there is only one match
 " longest inserts the longest common text of matches
 " ------------------------------------------------------
-set completeopt=menuone,longest
+"set completeopt=menuone,longest
 
 " -----------------------------------------------------------------------
 " Pressing enter while popup menu is active will select highlighted text
 " -----------------------------------------------------------------------
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u<CR>"
+"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u<CR>"
 
 " ------------------------------------------------------
 " Change background color to black 236
@@ -206,9 +199,9 @@ let R_show_args = 1
 "  C++ syntax options
 "  ----------------------------
 "let g:load_doxygen_syntax=1
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
+"let g:cpp_class_scope_highlight = 1
+"let g:cpp_member_variable_highlight = 1
+"let g:cpp_class_decl_highlight = 1
 
 " -------------------
 "  React snippets
