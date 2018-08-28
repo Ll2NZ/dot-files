@@ -22,7 +22,7 @@ alias publish="git push -u origin master"
 alias new-branch="git checkout -b"
 
 # Bare bones web development project file structure
-alias dev-dir="source ~/bin/dev-dir"
+alias create-app="source ~/bin/create-app"
 
 # tmux commands
 alias new-session="tmux new -s"
@@ -31,7 +31,7 @@ alias rm-session="tmux kill-session -t"
 alias lst="tmux ls"
 
 # Yarn commonly used commands
-alias s="yarn run dev"
+alias d="yarn run dev"
 alias p="yarn run prod"
 #alias t="yarn run test"
 #alias tw="yarn run test:watch"
@@ -53,7 +53,7 @@ alias sass="yarn add node-sass sass-loader --dev"
 alias load-img="yarn add file-loader url-loader --dev"
 
 # Babel
-alias babel="yarn add babel-loader babel-core babel-preset-env babel-preset-react babel-preset-stage-2 --dev"
+alias babel="yarn add babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties --dev"
 
 # Typescript
 alias typescript="yarn add typescript ts-loader --dev"
@@ -67,6 +67,9 @@ alias jest-dev="yarn add jest babel-jest react-test-renderer --dev"
 
 # Call all webpack packages at once
 alias install-webpack-config="webpack; analyzer; clean-webpack; css; sass; load-img; babel; typescript; react; redux; jest-dev"
+
+# Testing for typescript
+#alias ts-test="yarn add ts-jest @types/jest --dev"
 
 # Nodemon
 #alias nodemon="yarn add nodemon --dev"
