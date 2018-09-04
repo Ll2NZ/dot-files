@@ -20,17 +20,31 @@ call plug#begin()
     " React JSX functionality
     Plug 'mxw/vim-jsx'                      " React syntax support
     Plug 'mattn/emmet-vim'                  " HTML syntax support
+    Plug 'epilande/vim-react-snippets'      " React snippets
 
-    " JavaScript & Sass syntax
-    Plug 'pangloss/vim-javascript'          " Syntax support for JS
-    "Plug 'leafgarland/typescript-vim'       " TypeScript syntax
+    " JavaScript Plugins
+    Plug 'pangloss/vim-javascript'                   " Syntax support for JS
+    Plug 'othree/javascript-libraries-syntax.vim'    " React & D3 syntax
+    Plug 'heavenshell/vim-jsdoc'                     " Comments for functions
+    "Plug 'leafgarland/typescript-vim'               " TypeScript syntax
 
     " Testing plugins
-    "Plug 'sirver/ultisnips'
-
+    Plug 'sirver/ultisnips'                          " Need for React snippets
 
 call plug#end()
 
+" Use JS libraries
+" ------------------
+let g:used_javascript_libs = "react, d3"
+
+" JS Docs interactive prompt
+" -------------------------------
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+
+" Enable syntax highligthing of JSDoc comments
+" ----------------------------------------------
+let g:javascript_plugin_jsdoc = 1
 
 " Netrw defaults
 " --------------------------
@@ -123,10 +137,10 @@ let user_emmet_settings = {
 "  Syntax colors
 "  --------------
 " Conditionale, operators, statements set to pinkish color
-hi Operator ctermfg=161
-hi Conditional ctermfg=161
-hi Statement ctermfg=161
-hi Repeat ctermfg=161
+"hi Operator ctermfg=161
+"hi Conditional ctermfg=161
+"hi Statement ctermfg=161
+"hi Repeat ctermfg=161
 
 " Set comment color to 71, which is green. Set class color keyword
 hi Comment ctermfg=71
@@ -171,3 +185,7 @@ let R_show_args = 1
 "  Spell Check
 "  -------------
 set spelllang=en
+
+" Show path relative to current dir
+" -----------------------------------------
+set autochdir
