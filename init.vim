@@ -2,6 +2,7 @@
 call plug#begin()
 
     " Main plugins
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
     Plug 'danilo-augusto/vim-afterglow'     " Sublime scheme color
     Plug '907th/vim-auto-save'              " Autosave file
     Plug 'yggdroot/indentline'              " Indentation guides
@@ -15,12 +16,13 @@ call plug#begin()
 
     " R syntax support
     Plug 'jalvesaq/nvim-r'                  " RStudio-like behavior
-    "Plug 'gaalcaras/ncm-R'                  " Go as you type completion
+    "Plug 'gaalcaras/ncm-R'                 " Go as you type completion
 
     " React JSX functionality
     Plug 'mxw/vim-jsx'                      " React syntax support
     Plug 'mattn/emmet-vim'                  " HTML syntax support
-    Plug 'epilande/vim-react-snippets'      " React snippets
+    "Plug 'epilande/vim-react-snippets'      " React snippets
+    "Plug 'sirver/ultisnips'                 " Need for React snippets
 
     " JavaScript Plugins
     Plug 'pangloss/vim-javascript'                   " Syntax support for JS
@@ -29,7 +31,7 @@ call plug#begin()
     "Plug 'leafgarland/typescript-vim'               " TypeScript syntax
 
     " Testing plugins
-    Plug 'sirver/ultisnips'                          " Need for React snippets
+    Plug 'cakebaker/scss-syntax.vim'
 
 call plug#end()
 
@@ -137,10 +139,10 @@ let user_emmet_settings = {
 "  Syntax colors
 "  --------------
 " Conditionale, operators, statements set to pinkish color
-"hi Operator ctermfg=161
-"hi Conditional ctermfg=161
-"hi Statement ctermfg=161
-"hi Repeat ctermfg=161
+hi Operator ctermfg=161
+hi Conditional ctermfg=161
+hi Statement ctermfg=161
+hi Repeat ctermfg=161
 
 " Set comment color to 71, which is green. Set class color keyword
 hi Comment ctermfg=71
@@ -189,3 +191,12 @@ set spelllang=en
 " Show path relative to current dir
 " -----------------------------------------
 set autochdir
+
+" Move lines of code up or down
+" -------------------------------
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
