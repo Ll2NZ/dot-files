@@ -4,7 +4,7 @@ call plug#begin()
     " Main plugins
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
     Plug 'danilo-augusto/vim-afterglow'     " Sublime scheme color
-    Plug '907th/vim-auto-save'              " Autosave file
+    "Plug '907th/vim-auto-save'              " Autosave file
     Plug 'yggdroot/indentline'              " Indentation guides
     Plug 'vim-airline/vim-airline'          " Status line
     Plug 'w0rp/ale'                         " Linter for multiple languages
@@ -25,10 +25,11 @@ call plug#begin()
     "Plug 'sirver/ultisnips'                 " Need for React snippets
 
     " JavaScript Plugins
-    Plug 'pangloss/vim-javascript'                   " Syntax support for JS
-    Plug 'othree/javascript-libraries-syntax.vim'    " React & D3 syntax
-    Plug 'heavenshell/vim-jsdoc'                     " Comments for functions
-    "Plug 'leafgarland/typescript-vim'               " TypeScript syntax
+    Plug 'pangloss/vim-javascript'                         " Syntax support for JS
+    Plug 'othree/javascript-libraries-syntax.vim'          " React & D3 syntax
+    Plug 'heavenshell/vim-jsdoc'                           " Comments for functions
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " Code formatting
+    "Plug 'leafgarland/typescript-vim'                     " TypeScript syntax
 
     " Testing plugins
     Plug 'cakebaker/scss-syntax.vim'
@@ -37,7 +38,7 @@ call plug#end()
 
 " Use JS libraries
 " ------------------
-let g:used_javascript_libs = "react, d3"
+let g:used_javascript_libs = "react, d3, lodash"
 
 " JS Docs interactive prompt
 " -------------------------------
@@ -107,7 +108,7 @@ set completeopt=menuone,longest
 
 " Pressing enter while popup menu is active will select highlighted text
 " -----------------------------------------------------------------------
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u<CR>"
+"inoremap <expr> <CR> pumvisible() ? \"\<C-y>" : \"\<C-g>u<CR>"
 
 " Change background color to black 236
 " Change color of highlighted sections to 238/239
@@ -117,8 +118,8 @@ highlight Visual ctermbg=236
 
 " Automatically save file and hide notification
 " -----------------------------------------------
-let g:auto_save = 1
-let g:auto_save_silent = 1
+"let g:auto_save = 1
+"let g:auto_save_silent = 1
 
 " Indentation guide types and color
 " ----------------------------------------
