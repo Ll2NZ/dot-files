@@ -30,6 +30,7 @@ call plug#begin()
     Plug 'heavenshell/vim-jsdoc'                           " Comments for functions
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " Code formatting
     "Plug 'leafgarland/typescript-vim'                     " TypeScript syntax
+    Plug 'mustache/vim-mustache-handlebars'                " JS templating language
 
     " Testing plugins
     Plug 'cakebaker/scss-syntax.vim'
@@ -38,7 +39,7 @@ call plug#end()
 
 " Use JS libraries
 " ------------------
-let g:used_javascript_libs = "react, d3, lodash"
+let g:used_javascript_libs = "react, d3, underscore"
 
 " JS Docs interactive prompt
 " -------------------------------
@@ -201,3 +202,8 @@ inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+
+
+" React
+inoremap ir<CR> import React         from "react";<Esc>oimport { Component } from "react";<Esc>o<CR>
+inoremap rc<CR> class extends Component{<Esc>orender(){<Esc>oreturn();<Esc>o}<Esc>o}<Esc>4kea 
