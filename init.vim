@@ -21,15 +21,16 @@ call plug#begin()
     " React JSX functionality
     Plug 'mxw/vim-jsx'                      " React syntax support
     Plug 'mattn/emmet-vim'                  " HTML syntax support
-    "Plug 'epilande/vim-react-snippets'      " React snippets
-    "Plug 'sirver/ultisnips'                 " Need for React snippets
+
+    " Vue.js functionality
+    Plug 'posva/vim-vue'                    " Vue.js syntax support
 
     " JavaScript Plugins
     Plug 'pangloss/vim-javascript'                         " Syntax support for JS
     Plug 'othree/javascript-libraries-syntax.vim'          " React & D3 syntax
     Plug 'heavenshell/vim-jsdoc'                           " Comments for functions
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " Code formatting
-    "Plug 'leafgarland/typescript-vim'                     " TypeScript syntax
+    Plug 'leafgarland/typescript-vim'                      " TypeScript syntax
     Plug 'mustache/vim-mustache-handlebars'                " JS templating language
 
     " Testing plugins
@@ -39,7 +40,7 @@ call plug#end()
 
 " Use JS libraries
 " ------------------
-let g:used_javascript_libs = "react, d3, underscore"
+let g:used_javascript_libs = "react, d3, underscore, vue, handlebars"
 
 " JS Docs interactive prompt
 " -------------------------------
@@ -153,7 +154,7 @@ hi Keyword ctermfg=204
 " Enale Ale linter for the following languages
 " ----------------------------------------------
 let g:ale_linters = {
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint']
 \}
 
 " Ale error & warning configurations
@@ -203,7 +204,14 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-
 " React
 inoremap ir<CR> import React         from "react";<Esc>oimport { Component } from "react";<Esc>o<CR>
+" need trailing space here
 inoremap rc<CR> class extends Component{<Esc>orender(){<Esc>oreturn();<Esc>o}<Esc>o}<Esc>4kea 
+
+" Style popup menu
+" Pmenu – normal item
+" PmenuSel – selected item
+" PmenuSbar – scrollbar
+" PmenuThumb – thumb of the scrollbar
+hi Pmenu ctermbg=236
