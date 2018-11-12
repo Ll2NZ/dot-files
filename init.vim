@@ -4,19 +4,15 @@ call plug#begin()
     " Main plugins
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
     Plug 'danilo-augusto/vim-afterglow'     " Sublime scheme color
-    "Plug '907th/vim-auto-save'              " Autosave file
     Plug 'yggdroot/indentline'              " Indentation guides
     Plug 'vim-airline/vim-airline'          " Status line
     Plug 'w0rp/ale'                         " Linter for multiple languages
     Plug 'jiangmiao/auto-pairs'             " Quotes, Parens, & Brackets
     Plug 'tpope/vim-fugitive'               " GitHub integration
-
-    "  C++ syntax support
-    "Plug 'octol/vim-cpp-enhanced-highlight'
+    Plug 'dunstontc/vim-vscode-theme'
 
     " R syntax support
     Plug 'jalvesaq/nvim-r'                  " RStudio-like behavior
-    "Plug 'gaalcaras/ncm-R'                 " Go as you type completion
 
     " React JSX functionality
     Plug 'mxw/vim-jsx'                      " React syntax support
@@ -71,7 +67,8 @@ set history=25
 
 " Set color scheme, syntax, and number lines
 " ---------------------------------------------
-colorscheme afterglow
+"colorscheme afterglow
+colorscheme dark_plus
 syntax enable
 set number
 
@@ -149,7 +146,10 @@ hi Repeat ctermfg=161
 
 " Set comment color to 71, which is green. Set class color keyword
 hi Comment ctermfg=71
-hi Keyword ctermfg=204
+"hi Keyword ctermfg=204
+
+" Tilde color
+highlight EndOfBuffer ctermfg=15
 
 " Enale Ale linter for the following languages
 " ----------------------------------------------
@@ -179,14 +179,6 @@ let g:rout_follow_colorscheme = 1
 let R_min_editor_width = 100
 let R_show_args = 1
 
-" -----------------------------
-"  C++ syntax options
-"  ----------------------------
-"let g:load_doxygen_syntax=1
-"let g:cpp_class_scope_highlight = 1
-"let g:cpp_member_variable_highlight = 1
-"let g:cpp_class_decl_highlight = 1
-
 "  Spell Check
 "  -------------
 set spelllang=en
@@ -214,4 +206,5 @@ inoremap rc<CR> class extends Component{<Esc>orender(){<Esc>oreturn();<Esc>o}<Es
 " PmenuSel – selected item
 " PmenuSbar – scrollbar
 " PmenuThumb – thumb of the scrollbar
-hi Pmenu ctermbg=236
+hi Pmenu ctermbg=238
+hi Pmenu ctermfg=15
