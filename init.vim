@@ -208,3 +208,6 @@ inoremap rc<CR> class extends Component{<Esc>orender(){<Esc>oreturn();<Esc>o}<Es
 " PmenuThumb – thumb of the scrollbar
 hi Pmenu ctermbg=238
 hi Pmenu ctermfg=15
+
+" Style vertical bar split
+hi VertSplit ctermfg=15
