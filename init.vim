@@ -2,17 +2,18 @@
 call plug#begin()
 
     " Main plugins
-    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-    Plug 'danilo-augusto/vim-afterglow'     " Sublime scheme color
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
     Plug 'yggdroot/indentline'              " Indentation guides
     Plug 'vim-airline/vim-airline'          " Status line
     Plug 'w0rp/ale'                         " Linter for multiple languages
     Plug 'jiangmiao/auto-pairs'             " Quotes, Parens, & Brackets
     Plug 'tpope/vim-fugitive'               " GitHub integration
-    Plug 'dunstontc/vim-vscode-theme'
+    Plug 'dunstontc/vim-vscode-theme'       " VS Code Theme
+    Plug 'airblade/vim-gitgutter'           " Git Gutter
 
     " R syntax support
     Plug 'jalvesaq/nvim-r'                  " RStudio-like behavior
+    Plug 'chrisbra/csv.vim'                 " CSV reader
 
     " React JSX functionality
     Plug 'mxw/vim-jsx'                      " React syntax support
@@ -211,3 +212,6 @@ hi Pmenu ctermfg=15
 
 " Style vertical bar split
 hi VertSplit ctermfg=15
+
+" set to no wrapping of long lines of code
+set nowrap
