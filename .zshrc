@@ -51,7 +51,8 @@ alias autoprefixer="yarn add autoprefixer postcss-loader --dev"
 alias load-img="yarn add file-loader url-loader --dev"
 
 # Babel
-alias babel="yarn add babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties --dev"
+alias babel="yarn add babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties @babel/plugin-transform-runtime --dev"
+alias babel-async="yarn add @babel/runtime"
 #alias babel-bridge="yarn add babel-core@^7.0.0-bridge.0 --dev"
 
 # Typescript
@@ -60,17 +61,13 @@ alias typescript="yarn add typescript ts-loader --dev"
 # React, React-Router, Redux
 alias react="yarn add react react-dom react-router react-router-dom"
 alias react-hot-loader="yarn add react-hot-loader --dev"
-alias redux="yarn add redux react-redux"
+#alias redux="yarn add redux react-redux"
 
 # Jest
 alias jest-dev="yarn add jest babel-jest react-test-renderer --dev"
 
 # Call all webpack packages at once
-alias install-webpack-config="webpack; analyzer; clean-webpack; css; sass; autoprefixer ;load-img; babel; typescript; react; react-hot-loader; redux; jest-dev"
+alias install-webpack-config="webpack; analyzer; clean-webpack; css; sass; autoprefixer ;load-img; babel; babel-async; typescript; react; react-hot-loader; jest-dev"
 
 # Testing for typescript
 #alias ts-test="yarn add ts-jest @types/jest --dev"
-
-# Nodemon
-#alias nodemon="yarn add nodemon --dev"
-#alias autoprefixer="yarn add postcss-loader autoprefixer --dev"
