@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+# source webpack-pages to get access aliases
+if [ -f ~/bin/webpack-packages ]; then
+  source ~/bin/webpack-packages
+fi
+
 # Get current directory and desired directory
 current_dir=`pwd`
 desired_dir=$HOME/Desktop/
@@ -10,10 +15,10 @@ if [ current_dir != desired_dir ]; then
 fi
 
 # Create new directory using webpack-template.
-rsync -av --progress ~/webpack-template ~/Desktop --exclude node_modules --exclude .git --exclude coverage --exclude yarn.lock --exclude package.json --exclude tsconfig.json
+rsync -av --progress ~/bin/webpack-template ~/Desktop --exclude node_modules --exclude .git --exclude coverage --exclude yarn.lock --exclude package.json --exclude build
 
 # Add default package.json
-cp ~/package.json ~/Desktop/webpack-template
+cp ~/bin/package.json ~/Desktop/webpack-template
 
 # Change the name of webpack-template to something the user provides
 if [ -n "$1" ]; then
@@ -30,18 +35,12 @@ else
     echo
 fi
 
-# Add default typescript configuration file
-echo
-echo "Creating tsconfig.json file."
-echo
-tsc --init
-echo
 
 # Install webpack dependencies
 yarn init
 
 # Instal webpack packages via yarn
-install-webpack-config
+install-all
 
 # Friendly output
 echo
