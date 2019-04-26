@@ -28,6 +28,7 @@ chmod u+x webpack-packages # will make it an executable
 touch package.json
 
 # 5. clone the following repo at `https://github.com/Ll2NZ/webpack-template` and place in inside the `bin` directory
+#    note: make sure to name the repo webpack-template after you clone it!
 
 # finally, go back into the user directory
 cd ~/
