@@ -8,7 +8,7 @@ call plug#begin()
     Plug 'w0rp/ale'                         " Linter for multiple languages
     Plug 'jiangmiao/auto-pairs'             " Quotes, Parens, & Brackets
     Plug 'tpope/vim-fugitive'               " GitHub integration
-    Plug 'dunstontc/vim-vscode-theme'       " VS Code Theme
+    Plug 'tomasiser/vim-code-dark'          " VSCode theme
     Plug 'airblade/vim-gitgutter'           " Git Gutter
 
     " R syntax support
@@ -29,9 +29,11 @@ call plug#begin()
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' } " Code formatting
     Plug 'leafgarland/typescript-vim'                      " TypeScript syntax
     Plug 'mustache/vim-mustache-handlebars'                " JS templating language
+    Plug 'leafgarland/typescript-vim'
 
     " Testing plugins
     Plug 'cakebaker/scss-syntax.vim'
+    Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
@@ -68,8 +70,7 @@ set history=25
 
 " Set color scheme, syntax, and number lines
 " ---------------------------------------------
-"colorscheme afterglow
-colorscheme dark_plus
+colorscheme codedark
 syntax enable
 set number
 
@@ -86,9 +87,9 @@ set guicursor=
 " number of spaces to enter when tab is pressed
 " -------------------------------------------------------------------------------
 set expandtab
-set shiftwidth=4
-set softtabstop=4 " its default value is the same as tabstop
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2 " its default value is the same as tabstop
+set tabstop=2
 
 " Control <BS> behavior and enable mouse support
 " ------------------------------------------------
@@ -142,12 +143,12 @@ let user_emmet_settings = {
 " Conditionale, operators, statements set to pinkish color
 hi Operator ctermfg=161
 hi Conditional ctermfg=161
-hi Statement ctermfg=161
+"hi Statement ctermfg=161
 hi Repeat ctermfg=161
 
 " Set comment color to 71, which is green. Set class color keyword
 hi Comment ctermfg=71
-"hi Keyword ctermfg=204
+hi Keyword ctermfg=204
 
 " Tilde color
 highlight EndOfBuffer ctermfg=15
@@ -155,7 +156,7 @@ highlight EndOfBuffer ctermfg=15
 " Enale Ale linter for the following languages
 " ----------------------------------------------
 let g:ale_linters = {
-\   'javascript': ['eslint']
+\   'javascript': ['tslint', 'eslint']
 \}
 
 " Ale error & warning configurations
@@ -197,11 +198,6 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-" React
-inoremap ir<CR> import React         from "react";<Esc>oimport { Component } from "react";<Esc>o<CR>
-" need trailing space here
-inoremap rc<CR> class extends Component{<Esc>orender(){<Esc>oreturn();<Esc>o}<Esc>o}<Esc>4kea 
-
 " Style popup menu
 " Pmenu – normal item
 " PmenuSel – selected item
@@ -211,7 +207,7 @@ hi Pmenu ctermbg=238
 hi Pmenu ctermfg=15
 
 " Style vertical bar split
-hi VertSplit ctermfg=15
+"hi VertSplit ctermfg=15
 
 " set to no wrapping of long lines of code
 set nowrap
