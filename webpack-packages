@@ -2,8 +2,9 @@
 
 # base webpack packages
 alias webpack="yarn add webpack webpack-dev-server webpack-cli html-webpack-plugin webpack-merge --dev"
-alias analyzer="yarn add webpack-bundle-analyzer --dev"
+alias presets="yarn add webpack-bundle-analyzer compression-webpack-plugin --dev"
 alias clean-webpack="yarn add clean-webpack-plugin --dev"
+alias react-hot-loader="yarn add @hot-loader/react-dom react-hot-loader"
 
 # css and scss
 alias css="yarn add css-loader style-loader mini-css-extract-plugin --dev"
@@ -15,7 +16,7 @@ alias optimize-css="yarn add glob mini-css-extract-plugin optimize-css-assets-we
 alias images="yarn add file-loader url-loader --dev"
 
 # babel, eslint, prettier
-alias babel="yarn add babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties --dev"
+alias babel="yarn add babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties @babel/register --dev"
 alias eslint="yarn add eslint babel-eslint eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks --dev"
 alias prettier="yarn add prettier --dev"
 
@@ -30,5 +31,8 @@ alias testing="yarn add jest react-testing-library --dev"
 # js optimization
 alias terser="yarn add terser-webpack-plugin --dev"
 
+# dotenv
+alias dotenv="yarn add dotenv-webpack --dev"
+
 # install all packages
-alias install-all="webpack; analyzer; clean-webpack; css; scss; autoprefixer; optimize-css; images; babel; eslint; prettier; react; redux; redux-dev; testing; terser"
+alias install-all="webpack; presets; clean-webpack; css; scss; autoprefixer; optimize-css; images; babel; eslint; prettier; react; react-hot-loader; redux; redux-dev; testing; terser; dotenv"
