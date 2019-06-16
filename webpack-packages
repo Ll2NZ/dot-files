@@ -21,7 +21,7 @@ alias eslint="yarn add eslint babel-eslint eslint-config-prettier eslint-plugin-
 alias prettier="yarn add prettier --dev"
 
 # react & redux
-alias react="yarn add react react-dom react-router react-router-dom"
+alias react="yarn add react react-dom @reach/router"
 alias redux="yarn add redux redux-thunk react-redux"
 alias redux-dev="yarn add redux-devtools-extension --dev"
 
