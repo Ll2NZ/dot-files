@@ -1,4 +1,4 @@
-# create-app shell script
+# create-app script
 ```zsh
 # pass in the name of your new react project
 create-app my-react-app
