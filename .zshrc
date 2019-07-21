@@ -1,6 +1,3 @@
-# Configure $PATH
-export PATH=$PATH:~/bin
-
 # Customize command propmt line
 export PS1="%1d%# "
 
@@ -17,9 +14,6 @@ alias status="git status"
 alias publish="git push -u origin master"
 alias new-branch="git checkout -b"
 alias co="git checkout"
-
-# Bare bones web development project file structure
-alias create-app="source ~/bin/create-app"
 
 # tmux commands
 alias new-session="tmux new -s"
