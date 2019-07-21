@@ -2,3 +2,4 @@
 
 - `init.vim`
 - `.zshrc`
+- `.tmux.config`
