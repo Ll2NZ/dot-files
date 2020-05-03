@@ -24,6 +24,7 @@ call plug#begin()
   Plug 'w0rp/ale'
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'               " Git wrapper
+  Plug 'iamcco/coc-tailwindcss'
 
   " latex
   Plug 'xuhdev/vim-latex-live-preview'
