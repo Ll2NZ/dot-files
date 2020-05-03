@@ -1,10 +1,14 @@
 # Customize command propmt line
 export PS1="%1d%# "
 
+# Color directories
+export LSCOLORS=ga
+
 # Common commands used
 alias de="cd ~/Desktop/"
 alias up="cd .."
 alias ll="ls -lahG"
+alias cl="cat -n"
 alias nv="nvim ."
 
 # GitHub commands used often
